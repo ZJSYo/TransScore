@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demossm.mapper.FileMapper">
+    <insert id="insertFile">
+        insert into file (name,folder_id,type,filepath) values (#{fileName},#{folderId},#{type},#{filePath})
+    </insert>
+    <delete id="deleteFile">
+        delete from file where id = #{id}
+    </delete>
+    <delete id="deleteFileByFolderId">
+        delete from file where folder_id = #{folderId}
+    </delete>
+    <select id="getFileListByFolderId" resultType="com.example.demossm.bean.MediaFile">
+        select * from file where folder_id = #{folderId}
+    </select>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demossm.mapper.UserMapper">
+    <insert id="insertUser">
+        insert into user(username,password) values(#{username},#{password})
+    </insert>
+    <select id="getUserById" resultType="com.example.demossm.bean.User">
+        select * from user where id = #{id}
+    </select>
+    <select id="getUserByUserName" resultType="com.example.demossm.bean.User">
+        select * from user where username = #{username}
+    </select>
+</mapper>

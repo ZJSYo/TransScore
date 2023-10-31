@@ -1,0 +1,25 @@
+2023-08-11 11:06:19  INFO 7207 --- [main] c.e.d.Demo03LoggingApplication           : Starting Demo03LoggingApplication using Java 17.0.6 with PID 7207 (/Users/zhangjinshen/Desktop/JavaLearning/springboot-3/demo03-logging/target/classes started by zhangjinshen in /Users/zhangjinshen/Desktop/JavaLearning/springboot-3)
+2023-08-11 11:06:19  INFO 7207 --- [main] c.e.d.Demo03LoggingApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-08-11 11:06:19  INFO 7207 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-11 11:06:19  INFO 7207 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-11 11:06:19  INFO 7207 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 11:06:19  INFO 7207 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-11 11:06:19  INFO 7207 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 335 ms
+2023-08-11 11:06:20  INFO 7207 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-11 11:06:20  INFO 7207 --- [main] c.e.d.Demo03LoggingApplication           : Started Demo03LoggingApplication in 0.638 seconds (process running for 1.004)
+2023-08-11 11:07:41  INFO 7351 --- [main] c.e.d.Demo03LoggingApplication           : Starting Demo03LoggingApplication using Java 17.0.6 with PID 7351 (/Users/zhangjinshen/Desktop/JavaLearning/springboot-3/demo03-logging/target/classes started by zhangjinshen in /Users/zhangjinshen/Desktop/JavaLearning/springboot-3)
+2023-08-11 11:07:41  INFO 7351 --- [main] c.e.d.Demo03LoggingApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-08-11 11:07:41  INFO 7351 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-11 11:07:41  INFO 7351 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-11 11:07:41  INFO 7351 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 11:07:41  INFO 7351 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-11 11:07:41  INFO 7351 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 349 ms
+2023-08-11 11:07:41  INFO 7351 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-11 11:07:41  INFO 7351 --- [main] c.e.d.Demo03LoggingApplication           : Started Demo03LoggingApplication in 0.671 seconds (process running for 0.918)
+2023-08-11 16:33:14  INFO 7351 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-11 16:33:14  INFO 7351 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-11 16:33:14  INFO 7351 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-08-11 16:33:14  WARN 7351 --- [http-nio-8080-exec-1] c.e.d.controller.HelloController         : warn日志
+2023-08-11 16:33:14  INFO 7351 --- [http-nio-8080-exec-1] c.e.d.controller.HelloController         : 发送get请求/hello
+2023-08-11 16:33:15  WARN 7351 --- [http-nio-8080-exec-2] c.e.d.controller.HelloController         : warn日志
+2023-08-11 16:33:15  INFO 7351 --- [http-nio-8080-exec-2] c.e.d.controller.HelloController         : 发送get请求/hello
