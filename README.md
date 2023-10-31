@@ -1,4 +1,7 @@
 # TransScore
+
+![logo](https://p.ipic.vip/8lkjaa.png)
+
 一款能够实现听曲写谱，写文生音，图像转文的音频，文本，图像多模态转化App。
 
 #### 环境配置
