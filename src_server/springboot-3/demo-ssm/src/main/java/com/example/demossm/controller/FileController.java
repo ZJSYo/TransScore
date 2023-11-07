@@ -3,6 +3,7 @@ package com.example.demossm.controller;
 import com.example.demossm.bean.MediaFile;
 import com.example.demossm.request.FileRequest;
 import com.example.demossm.response.FileResponse;
+import com.example.demossm.response.MediaResponse;
 import com.example.demossm.response.UserResponse;
 import com.example.demossm.service.FileService;
 import com.example.demossm.utils.FileUtils;
@@ -86,6 +87,22 @@ public class FileController {
         try {
             fileService.deleteFile(fileId);
             res = mapper.writeValueAsString(new UserResponse("ok", null));
+        } catch (Exception e) {
+            try {
+                res = mapper.writeValueAsString(new UserResponse("error", null));
+            } catch (Exception e1) {
+                res = "error";
+            }
+        }
+        return res;
+    }
+    @GetMapping("/file/download")
+    public String getFileByFileId(@RequestParam("fileId") Integer fileId){
+        String res = "ok";
+        try {
+            MediaFile fileByFileId = fileService.getFileByFileId(fileId);
+            String data = FileUtils.getBaseImg(fileByFileId.getFilePath());
+            res = mapper.writeValueAsString(new MediaResponse("ok",data));
         } catch (Exception e) {
             try {
                 res = mapper.writeValueAsString(new UserResponse("error", null));

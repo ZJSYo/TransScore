@@ -28,4 +28,7 @@ public class FileService {
     public List<MediaFile> getFileListByFolderId(Integer folderId){
         return fileMapper.getFileListByFolderId(folderId);
     }
+    public MediaFile getFileByFileId(Integer fileId){
+        return fileMapper.getFileByFileId(fileId);
+    }
 }

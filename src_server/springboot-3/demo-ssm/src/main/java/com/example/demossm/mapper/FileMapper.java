@@ -18,5 +18,6 @@ public interface FileMapper {
 
     void deleteFile(Integer fileId);
     void deleteFileByFolderId(Integer folderId);
+    MediaFile getFileByFileId(@Param("id") Integer fileId);
 
 }

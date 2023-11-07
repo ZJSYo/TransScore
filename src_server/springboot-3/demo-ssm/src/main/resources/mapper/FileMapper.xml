@@ -15,4 +15,7 @@
     <select id="getFileListByFolderId" resultType="com.example.demossm.bean.MediaFile">
         select * from file where folder_id = #{folderId}
     </select>
+    <select id="getFileByFileId" resultType="com.example.demossm.bean.MediaFile">
+        select * from file where id = #{id}
+    </select>
 </mapper>

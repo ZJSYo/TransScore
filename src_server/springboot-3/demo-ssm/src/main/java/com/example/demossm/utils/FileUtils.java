@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Base64;
+import java.util.List;
 
 /**
  * @author zhangjinshen
@@ -21,7 +22,7 @@ public final class FileUtils {
     }
     public static final String AUDIO_FOLDER_PATH = "/home/zhang/下载/软件工程/mp3_output/";
     public  static final String SHEET_FOLDER_PATH = "/home/zhang/下载/软件工程/png_output/";
-    public  static final String TEXT_FOLDER_PATH = "/home/zhang/下载/软件工程/input_text";
+    public  static final String TEXT_FOLDER_PATH = "/home/zhang/下载/软件工程/input_text/";
 
     private FileUtils() {
     }
@@ -30,7 +31,7 @@ public final class FileUtils {
         return switch (type) {
             case AUDIO -> BASE_PATH + "audio_" + System.currentTimeMillis() + ".mp3";
             case TEXT -> BASE_PATH + "text_" + System.currentTimeMillis() + ".txt";
-            case IMAGE -> BASE_PATH + "image_" + System.currentTimeMillis() + ".jpg";
+            case IMAGE -> BASE_PATH + "image_" + System.currentTimeMillis() + ".png";
             default -> BASE_PATH + "temp_" + System.currentTimeMillis() + ".txt";
         };
 
@@ -81,6 +82,26 @@ public final class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public static String readTxtFile(String filePath){
+        //读取txt文件
+        String result = "";
+        try {
+            java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader(filePath));//构造一个BufferedReader类来读取文件
+            String s = null;
+            while((s = br.readLine())!=null){//使用readLine方法，一次读一行
+                result = result + "\n" +s;
+            }
+            br.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    public static List<String> getFileNameList(String audioFolderPath) {
+        java.io.File file = new java.io.File(audioFolderPath);
+        String[] fileList = file.list();
+        return List.of(fileList);
     }
 
 }
